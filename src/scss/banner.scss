@@ -1,0 +1,53 @@
+@import "utils/variables-mixin";
+
+.banner {
+  margin: 0 auto 22px;
+  height: 111px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px rgb(71, 62, 61);
+  color: white;
+  background-size: cover;
+  background-position: center 30%;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/img/banner/IMG.png");
+  h1 {
+    margin-left: 16px;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  &.about-us {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../assets/img/banner/IMG2.png");
+    height: 210px;
+    h1 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .banner {
+    margin: 40px auto 40px;
+    height: 210px;
+    .mobile-break {
+      display: none;
+    }
+
+    h1 {
+      width: 100%;
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+}
+@media screen and (min-width: $desktop-min-width) {
+  .banner {
+    height: 210px;
+    h1 {
+      font-size: 44px;
+    }
+  }
+}
