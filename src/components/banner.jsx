@@ -3,9 +3,7 @@ import PropTypes from "prop-types";
 
 function Banner({ extraClass }) {
   return (
-    // --------------------------
-    //Récupération des nom de class via les props, pour définir le background-img et la taille
-    // --------------------------
+    //Récupération des nom de class via les props, background-img + taille
     <div className={`banner ${extraClass} `}>
       <h1>
         Chez vous,
@@ -19,7 +17,7 @@ Banner.propTypes = {
   extraClass: PropTypes.string,
 };
 
-Banner.defaultProps = {
+Banner.props = {
   extraClass: "",
 };
 
